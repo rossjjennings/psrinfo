@@ -4,3 +4,6 @@
 [submodule "NE2001"]
 	path = NE2001
 	url = https://github.com/rossjjennings/NE2001.git
+[submodule "ymw16"]
+	path = ymw16
+	url = https://bitbucket.org/psrsoft/ymw16.git
