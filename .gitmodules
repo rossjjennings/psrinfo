@@ -1,0 +1,3 @@
+[submodule "psrcat"]
+	path = psrcat
+	url = https://github.com/kernsuite-debian/psrcat.git
