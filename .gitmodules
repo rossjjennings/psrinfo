@@ -1,3 +1,6 @@
 [submodule "psrcat"]
 	path = psrcat
 	url = https://github.com/kernsuite-debian/psrcat.git
+[submodule "NE2001"]
+	path = NE2001
+	url = https://github.com/rossjjennings/NE2001.git
