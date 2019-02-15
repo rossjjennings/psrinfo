@@ -6,7 +6,7 @@ import os.path
 from ruamel.yaml import YAML
 yaml = YAML(typ='safe')
 
-from gaiapx.psr import pulsar
+from psrinfo.psr import pulsar
 
 this_dir = os.path.dirname(__file__)
 parent_dir = os.path.dirname(this_dir)
@@ -42,13 +42,11 @@ def fetch_records(extra_args=None, extra_params=None):
     args += ['-o', 'long_error_csv']
     if extra_args is not None:
         args += extra_args
-    params = ['name', 'raj', 'decj', 'elat', 'elong']
+    params = ['name', 'raj', 'decj', 'elat', 'elong', 'dm',
+              'pmra', 'pmdec', 'pmelat', 'pmelong', 'posepoch']
     if extra_params is not None:
         for param in extra_params:
-            if param == 'pm':
-                params += ['pmra', 'pmdec', 'pmelat', 'pmelong']
-            else:
-                params.append(param)
+            params.append(param)
     args += ['-c', ' '.join(params)]
     
     fields = generate_fields(params)
